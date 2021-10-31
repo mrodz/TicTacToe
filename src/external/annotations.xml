@@ -1,0 +1,5 @@
+<root>
+    <item name='external.LogMessage LogMessage(java.lang.String, int, java.io.OutputStream...) 0'>
+        <annotation name='org.jetbrains.annotations.Nullable'/>
+    </item>
+</root>

@@ -1,0 +1,8 @@
+<root>
+    <item name='tictactoe.internal.players.Playable java.lang.String getName()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='tictactoe.internal.players.Playable tictactoe.internal.Placement getPlacement()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>
