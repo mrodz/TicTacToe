@@ -67,7 +67,7 @@ public class Round {
                              ? String.format(AppConstants.Messages.Status.WINNER, AppConstants.SECOND_MOVE)
                              : gs == GameState.TIE
                              ? AppConstants.Messages.Status.TIE
-                             : AppConstants.Messages.Status.PLAYING;
+                             : String.format(AppConstants.Messages.Status.PLAYING, Game.round.turn);
 
                      StatusBar.updateText(msg);
 

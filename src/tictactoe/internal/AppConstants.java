@@ -194,12 +194,12 @@ public class AppConstants {
     public static class Messages {
         /** @see tictactoe.components.StatusBar */
         public static class Status {
-            public static final String NOT_STARTED  = "Game is not started";
+            public static final String NOT_STARTED  = "Game hasn't started";
             public static final String RESET_BOARD  = "Board Reset!";
             public static final String GAME_STARTED = "Started the Game!";
-            public static final String WINNER = "%c wins";
+            public static final String WINNER = "%c wins!";
             public static final String TIE = "Draw";
-            public static final String PLAYING = "Game in progress";
+            public static final String PLAYING = "Game in progress, %c's turn";
         }
 
         /** @see tictactoe.components.ControlPanel */
