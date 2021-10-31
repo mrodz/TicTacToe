@@ -77,7 +77,8 @@ which gives excellent insight as to how decision trees work.
 
 ***
 
-Initial Release: 10/31/2021 - @mrodz
+Initial Release: 10/31/2021 - @mrodz  
+Built on Java 15; requires said JDK or newer to run.
 
 <!-- Shortened Links -->
 [Minimax Algorithm]: https://en.wikipedia.org/wiki/Minimax
