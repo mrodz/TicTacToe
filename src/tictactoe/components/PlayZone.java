@@ -1,20 +1,38 @@
 package tictactoe.components;
 
-import javax.swing.*;
+import external.AudioReader;
+import external.LogMessage;
+
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+import java.awt.RenderingHints;
+import java.awt.BasicStroke;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Area;
 import java.awt.geom.RoundRectangle2D;
+
 import java.io.Serializable;
+
 import java.util.Arrays;
 import java.util.Random;
 
-import external.AudioReader;
-import external.LogMessage;
 import tictactoe.Colors;
-import tictactoe.internal.*;
+import tictactoe.internal.Game;
+import tictactoe.internal.Round;
+import tictactoe.internal.Slot;
+import tictactoe.internal.Placement;
+import tictactoe.internal.AppConstants;
+import tictactoe.internal.Grid;
+import tictactoe.internal.GameState;
 import tictactoe.internal.players.Human;
 
 import static tictactoe.TicTacToe.*;

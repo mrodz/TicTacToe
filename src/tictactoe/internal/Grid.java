@@ -3,7 +3,8 @@ package tictactoe.internal;
 import tictactoe.Colors;
 import tictactoe.components.GridBubble;
 
-import javax.swing.*;
+import javax.swing.JButton;
+
 import java.util.Arrays;
 
 import static tictactoe.TicTacToe.*;

@@ -3,7 +3,9 @@ package tictactoe.internal;
 import tictactoe.TicTacToe;
 import tictactoe.components.PlayZone;
 import tictactoe.components.StatusBar;
-import tictactoe.internal.players.*;
+
+import tictactoe.internal.players.Human;
+import tictactoe.internal.players.Playable;
 
 import static tictactoe.internal.AppConstants.range;
 
@@ -11,7 +13,7 @@ import static tictactoe.internal.AppConstants.range;
 public class Game {
     public static volatile Grid master = new Grid();
     /** update the constructor parameters to manually set the players of the game. */
-    public static volatile Round round = new Round(new Human(), new HardBot(), master);
+    public static volatile Round round = new Round(new Human(), new Human(), master);
 
     public static volatile boolean playing = false;
 
@@ -31,8 +33,8 @@ public class Game {
      */
     public static synchronized void resetBoard() {
         round.t.interrupt();
-        TicTacToe.playzone.initializeButtons();
-        TicTacToe.playzone.lock(true);
+        TicTacToe.PLAY_ZONE.initializeButtons();
+        TicTacToe.PLAY_ZONE.lock(true);
         PlayZone.move = false;
         Human.emptyQueue();
 

@@ -1,17 +1,28 @@
 package tictactoe.components;
 
 import external.AudioReader;
+
 import tictactoe.Colors;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-import static tictactoe.TicTacToe.*;
+import static tictactoe.TicTacToe.DECIDED_SIZE;
+import static tictactoe.TicTacToe.APP_ICON;
+import static tictactoe.TicTacToe.asInt;
+import static tictactoe.TicTacToe.getBestFontSize;
 
 /**
  * Extremely rudimentary tutorial; probably will update in the future.

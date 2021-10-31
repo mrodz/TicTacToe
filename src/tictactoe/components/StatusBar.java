@@ -5,9 +5,13 @@ import tictactoe.Colors;
 import tictactoe.TicTacToe;
 import tictactoe.internal.AppConstants;
 
-import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.BorderLayout;
 
 import static tictactoe.TicTacToe.DECIDED_SIZE;
 import static tictactoe.TicTacToe.getPercentOf;

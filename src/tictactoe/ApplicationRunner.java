@@ -1,7 +1,5 @@
 package tictactoe;
 
-import external.LogMessage;
-
 /**
  * This class serves as the entrypoint to the program.
  */
@@ -9,7 +7,7 @@ public class ApplicationRunner {
 
     static {
         // Set default logger to write messages to System#out
-        LogMessage.setDefaultOutputStreams(System.out);
+        external.LogMessage.setDefaultOutputStreams(System.out);
     }
 
     /**

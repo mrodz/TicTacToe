@@ -1,6 +1,11 @@
 package tictactoe.internal.players;
 
-import tictactoe.internal.*;
+import tictactoe.internal.Grid;
+import tictactoe.internal.PlayableField;
+import tictactoe.internal.AppConstants;
+import tictactoe.internal.GameState;
+import tictactoe.internal.Placement;
+import tictactoe.internal.Game;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

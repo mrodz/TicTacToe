@@ -1,9 +1,16 @@
 package tictactoe;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JComponent;
+
+import java.awt.Color;
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.BasicStroke;
 import java.awt.geom.Area;
 import java.awt.geom.RoundRectangle2D;
+
 import java.io.Serial;
 import java.io.Serializable;
 

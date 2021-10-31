@@ -2,18 +2,40 @@ package tictactoe.components;
 
 import external.AudioReader;
 import external.ImageReader;
+
 import tictactoe.Colors;
 import tictactoe.internal.AppConstants;
 import tictactoe.internal.Game;
-import javax.swing.*;
+
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JToolTip;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+
+import java.awt.Image;
+import java.awt.Dimension;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import java.io.Serializable;
+
 import java.util.Objects;
 import java.util.function.Consumer;
-import static tictactoe.TicTacToe.*;
+
+import static tictactoe.TicTacToe.DECIDED_SIZE;
+import static tictactoe.TicTacToe.asInt;
+import static tictactoe.TicTacToe.getPercentOf;
+import static tictactoe.TicTacToe.getBestFontSize;
 
 /**
  * The sidebar to the app; contains the exit + minimize buttons, and also the tutorial.

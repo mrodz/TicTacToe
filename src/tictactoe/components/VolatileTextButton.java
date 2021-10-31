@@ -2,12 +2,28 @@ package tictactoe.components;
 
 import external.AudioReader;
 import external.ImageReader;
+
 import tictactoe.Colors;
-import javax.swing.*;
-import java.awt.*;
+
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JToolTip;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
+
 import java.util.Objects;
 
-import static tictactoe.TicTacToe.*;
+import static tictactoe.TicTacToe.asInt;
+import static tictactoe.TicTacToe.getBestFontSize;
+import static tictactoe.TicTacToe.DECIDED_SIZE;
+import static tictactoe.TicTacToe.WRAPPER;
 
 /**
  * A button with a text state and two arrows used to cycle between input values.

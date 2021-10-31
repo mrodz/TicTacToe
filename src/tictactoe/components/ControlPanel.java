@@ -2,21 +2,38 @@ package tictactoe.components;
 
 import external.AudioReader;
 import external.ImageReader;
+
 import tictactoe.Colors;
 import tictactoe.TicTacToe;
 import tictactoe.internal.AppConstants;
 import tictactoe.internal.Game;
 import tictactoe.internal.players.Playable;
 
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JToolTip;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.BasicStroke;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.RoundRectangle2D;
+
 import java.util.Objects;
 
-import static tictactoe.TicTacToe.*;
+import static tictactoe.TicTacToe.asInt;
+import static tictactoe.TicTacToe.DECIDED_SIZE;
+import static tictactoe.TicTacToe.getBestFontSize;
 
 /**
  * The yellow bubble at the top of the application window; contains the Action Button
@@ -32,10 +49,18 @@ public class ControlPanel extends JPanel {
     VolatileTextButton p1 = new VolatileTextButton(AppConstants.players);
     VolatileTextButton p2 = new VolatileTextButton(AppConstants.players);
 
+    /**
+     * TODO: 10/31/2021 Get working tooltips; they are all commented out because they cause issues with rendering.
+     */
     public ControlPanel() {
         this.setSize(winSize[0], winSize[1]);
         this.setPreferredSize(new Dimension(winSize[0], winSize[1]));
         this.setOpaque(false);
+
+
+        //
+        // SPRITES
+        //
 
         Image start =
                 Objects.requireNonNull(ImageReader.forName("start_button.png"))
@@ -56,6 +81,10 @@ public class ControlPanel extends JPanel {
         Image reset_hover =
                 Objects.requireNonNull(ImageReader.forName("reset_hover.png"))
                         .getScaledInstance((int) (DECIDED_SIZE * 0.085), (int) (DECIDED_SIZE * 0.085), Image.SCALE_SMOOTH);
+
+        //
+        // END OF SPRITES
+        //
 
         JPanel items = new JPanel(new BorderLayout());
         items.setOpaque(false);
@@ -94,7 +123,7 @@ public class ControlPanel extends JPanel {
             actionButton.setHorizontalAlignment(SwingConstants.CENTER);
             actionButton.setVerticalAlignment(SwingConstants.CENTER);
 
-//            actionButton.setToolTipText("Start Button: Click to play!");
+            //  actionButton.setToolTipText("Start Button: Click to play!");
             actionButton.setFont(baseFont);
             actionButton.setForeground(Color.BLACK);
             actionButton.setVerticalTextPosition(SwingConstants.BOTTOM);
@@ -156,13 +185,13 @@ public class ControlPanel extends JPanel {
                         Playable[] players = {Playable.forName(arr[0]), Playable.forName(arr[1])};
                         Game.updatePlayers(players[0], players[1]);
 
-//                        actionButton.setToolTipText("Reset Button: Click to reset the board!");
+                        // actionButton.setToolTipText("Reset Button: Click to reset the board!");
 
                         p1.setLocked(true);
-//                        p1.text.setToolTipText(String.format("%s - This is player 'X'", arr[0]));
+                        // p1.text.setToolTipText(String.format("%s - This is player 'X'", arr[0]));
                         p1.setBold(true);
                         p2.setLocked(true);
-//                        p2.text.setToolTipText(String.format("%s - This is player 'O'", arr[0]));
+                        // p2.text.setToolTipText(String.format("%s - This is player 'O'", arr[0]));
                         p2.setBold(true);
 
                         try {
@@ -171,17 +200,17 @@ public class ControlPanel extends JPanel {
                             Game.round.play();
                         }
                     } else {
-//                        actionButton.setToolTipText("Start Button: Click to play!");
+                        // actionButton.setToolTipText("Start Button: Click to play!");
                         Game.resetBoard();
                         Game.round.t.interrupt();
-                        TicTacToe.playzone.lock(true);
+                        TicTacToe.PLAY_ZONE.lock(true);
 
                         StatusBar.updateText(AppConstants.Messages.Status.RESET_BOARD);
-//                        p1.text.setToolTipText(AppConstants.Messages.Players.forName(p1.values.getCurrentElement()).getDesc());
+                        // p1.text.setToolTipText(AppConstants.Messages.Players.forName(p1.values.getCurrentElement()).getDesc());
                         p1.setLocked(false);
                         p1.setBold(false);
 
-//                        p2.text.setToolTipText(AppConstants.Messages.Players.forName(p2.values.getCurrentElement()).getDesc());
+                        // p2.text.setToolTipText(AppConstants.Messages.Players.forName(p2.values.getCurrentElement()).getDesc());
                         p2.setBold(false);
                         p2.setLocked(false);
 
@@ -205,6 +234,10 @@ public class ControlPanel extends JPanel {
 
     }
 
+    /**
+     * Get the {@link String} values stored in the two text wheels ({@link #p1} and {@link #p2})
+     * @return a {@code String[2]} array containing these elements.
+     */
     public String[] getPlayerNames() {
         return new String[] {p1.values.getCurrentElement(), p2.values.getCurrentElement()};
     }

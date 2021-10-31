@@ -2,7 +2,10 @@ package tictactoe.components;
 
 import tictactoe.Bubble;
 import tictactoe.Colors;
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
 import java.io.Serializable;
 
 /**

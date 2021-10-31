@@ -1,6 +1,7 @@
 package tictactoe.internal;
 
 import external.AudioReader;
+
 import tictactoe.TicTacToe;
 import tictactoe.components.StatusBar;
 import tictactoe.internal.players.Bot;
@@ -71,7 +72,7 @@ public class Round {
                      StatusBar.updateText(msg);
 
                      if (gs != GameState.PLAYING) {
-                         TicTacToe.playzone.paintWinningLine(Game.master);
+                         TicTacToe.PLAY_ZONE.paintWinningLine(Game.master);
                          try {
                              String win  = "win.wav";
                              String loss = "loss.wav";
@@ -94,7 +95,7 @@ public class Round {
 
                              this.won = true;
                              if (gs == GameState.FIRST_WIN || gs == GameState.SECOND_WIN) {
-                                 TicTacToe.playzone.paintWinningLine(Game.master);
+                                 TicTacToe.PLAY_ZONE.paintWinningLine(Game.master);
                              }
                          }
                      }
@@ -105,7 +106,7 @@ public class Round {
 
              // close the game state; implementations that read human input
              // need to unlock the field first to allow clicks.
-             TicTacToe.playzone.lock(true);
+             TicTacToe.PLAY_ZONE.lock(true);
              Game.playing = false;
         });
     }
@@ -124,9 +125,9 @@ public class Round {
         turn = ++this.steps % 2 == 0 ? AppConstants.FIRST_MOVE : AppConstants.SECOND_MOVE;
     }
 
-    /** @see TicTacToe#playzone */
+    /** @see TicTacToe#PLAY_ZONE */
     public synchronized void setLocked(boolean b, boolean override) {
-        TicTacToe.playzone.lock(override || b ^ isWon());
+        TicTacToe.PLAY_ZONE.lock(override || b ^ isWon());
     }
 
     public synchronized boolean isWon() {

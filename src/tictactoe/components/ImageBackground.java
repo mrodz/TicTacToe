@@ -2,8 +2,13 @@ package tictactoe.components;
 
 import external.ImageReader;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+
+import java.awt.Image;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 /**
  * Renders the background image, the X's and O's (images/XOBackground.png)

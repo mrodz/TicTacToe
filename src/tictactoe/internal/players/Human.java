@@ -26,7 +26,7 @@ public class Human implements Playable {
      */
     @Override
     public Placement getPlacement() {
-        TicTacToe.playzone.lock(Game.round.isWon());
+        TicTacToe.PLAY_ZONE.lock(Game.round.isWon());
 
         // This thread will sleep until a response (placement)
         // is detected in any PlayZone cell.

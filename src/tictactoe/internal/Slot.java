@@ -1,6 +1,6 @@
 package tictactoe.internal;
 
-import javax.swing.*;
+import javax.swing.JButton;
 
 /**
  * Saves an x & y coordinate, along with bundling a {@link JButton} with a {@code char} symbol.
