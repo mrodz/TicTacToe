@@ -40,7 +40,7 @@ all game state data will be wiped, and you are given the choice to select new pl
 This is the area painted in purple, and contains a 9x9 grid of cells. Once a round of Tic Tac Toe
 has started, the game will loop through each move. If said turn belongs to a bot, it will make a
 move automatically; otherwise, the game will wait for a human user to click on a cell. The first 
-empty cell person clicks on will be saved as their placement.  
+empty cell a person clicks on will be saved as their placement.  
   
 A cell can only be used once per round. The game ends if there are no open slots left to fill,
 or if a playable entity manages to get three of their own tokens in a row.
@@ -48,18 +48,18 @@ or if a playable entity manages to get three of their own tokens in a row.
 #### The Status Bar
 You can find the status bar towards the bottom of the application. It will show you the current 
 status of the game. This can be one of the following: `Game hasn't started`, `Board Reset!`,
-`Started the Game!`, `%c wins!`, `Draw`, `Game in progress, %c's turn`.
+`Started the Game!`, `%c wins!`, `Draw`, and `Game in progress, %c's turn`.
 
 #### The Sidebar
 The sidebar is the red bar on the right side of the central app content, and has three useful buttons.
 These are an exit button, a minimize button, and a help button. The exit button closes the app, while the
-minimize button hides it, and the help button displays a simplified version of this ```README ```file.
+minimize button hides it, and the help button displays a simplified version of this ```README```file.
 
 ***
 
 ### Bots
 This implementation of Tic Tac Toe allows a user to play against bots that have varied levels of 
-complexity.
+"intelligence."
 
 #### Easy Bot
 The easy bot, as the name suggests, is a mild opponent that can only make random placements.
