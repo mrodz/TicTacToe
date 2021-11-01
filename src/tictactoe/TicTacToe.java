@@ -2,6 +2,7 @@ package tictactoe;
 
 import external.AudioReader;
 import external.ImageReader;
+import external.LogMessage;
 
 import tictactoe.components.PlayZone;
 import tictactoe.components.MenuBar;
@@ -31,7 +32,7 @@ import java.util.Objects;
 
 public class TicTacToe extends JFrame {
     /**
-     * This is the main content panel of the app. To rendera component,
+     * This is the main content panel of the app. To render component,
      * use the {@link JComponent#add(Component)} method on this object.
      */
     public static final JPanel WRAPPER;
@@ -74,6 +75,8 @@ public class TicTacToe extends JFrame {
 
         PLAY_ZONE = new PlayZone();
         TOP_WRAPPER = new ImageBackground(new BorderLayout());
+
+        new LogMessage("Initialized required constant fields", LogMessage.INFO);
     }
 
     /**
@@ -81,6 +84,7 @@ public class TicTacToe extends JFrame {
      */
     public TicTacToe() {
         super("Desktop Tic Tac Toe");
+        new LogMessage("Starting render of initial frame", LogMessage.INFO);
 
         int size = asInt(getPercentOf(DECIDED_SIZE, 10));
 
@@ -148,9 +152,10 @@ public class TicTacToe extends JFrame {
         ImageBackground.maxSize = this.getSize();
 
         this.setVisible(true);
+
+        new LogMessage("Finished render of initial frame", LogMessage.INFO);
     }
 
-    @SuppressWarnings("SameParameterValue")
     public static double getPercentOf(double val, double x) {
         return val / 100f * x;
     }
