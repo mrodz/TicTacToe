@@ -73,8 +73,8 @@ those conditions are met, then the bot will make a random placement.
 #### Hard Bot
 The hard bot is the most advanced of these bots, and it makes decisions by means of the 
 [Minimax Algorithm]. It will consider every single possible outcome from its moves, and 
-plot a move accordingly. This implementation was heavily inspire by [Sebastian Lague's Video],
-which gives excellent insight as to how decision trees work.
+plot a move accordingly. This implementation was heavily inspired by [Sebastian Lague's Video],
+which gives excellent insight into how decision trees work.
 
 ***
 
