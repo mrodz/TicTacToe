@@ -2,6 +2,7 @@
 
 [![Latest release](https://img.shields.io/badge/Release-1.0.1-blue)](https://github.com/mrodz/TicTacToe-Reimagined/releases)
 [![Build Status](https://img.shields.io/badge/Build-Passing-Sucess)]()
+[![Requires](https://img.shields.io/badge/Requires-Java%2015+-critical)](https://java.com/en/download/)
 
 Tic Tac Toe is a classic children's game where two players compete to see
 who can match three of their symbols in a row before their opponent.  
@@ -77,7 +78,8 @@ which gives excellent insight as to how decision trees work.
 
 ***
 
-Initial Release: 10/31/2021 - @mrodz
+Initial Release: 10/31/2021 - @mrodz  
+Built on Java 15; requires said JDK or newer to run.
 
 <!-- Shortened Links -->
 [Minimax Algorithm]: https://en.wikipedia.org/wiki/Minimax
