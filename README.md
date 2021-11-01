@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-[![Latest release](https://img.shields.io/badge/Release-1.0.1-blue)](https://github.com/mrodz/TicTacToe-Reimagined/releases)
+[![Latest release](https://img.shields.io/badge/Release-1.0.2-blue)](https://github.com/mrodz/TicTacToe-Reimagined/releases)
 [![Build Status](https://img.shields.io/badge/Build-Passing-Sucess)]()
 [![Requires](https://img.shields.io/badge/Requires-Java%2015+-critical)](https://java.com/en/download/)
 
