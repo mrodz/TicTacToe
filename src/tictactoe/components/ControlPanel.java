@@ -3,6 +3,7 @@ package tictactoe.components;
 import external.AudioReader;
 import external.ImageReader;
 
+import external.LogMessage;
 import tictactoe.Colors;
 import tictactoe.TicTacToe;
 import tictactoe.internal.AppConstants;
@@ -197,6 +198,7 @@ public class ControlPanel extends JPanel {
                         try {
                             AudioReader.playSound("game_start.wav");
                         } finally {
+                            new LogMessage(String.format("Starting round with players X('%s') and O('%s')", arr[0], arr[1]), LogMessage.INFO);
                             Game.round.play();
                         }
                     } else {

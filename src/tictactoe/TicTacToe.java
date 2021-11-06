@@ -147,6 +147,11 @@ public class TicTacToe extends JFrame {
             public void windowDeiconified(WindowEvent e) {
                 AudioReader.playSound("gn_button_click.wav");
             }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                new LogMessage("Excited App, Goodbye!", LogMessage.INFO);
+            }
         });
 
         ImageBackground.maxSize = this.getSize();

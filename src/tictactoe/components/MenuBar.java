@@ -3,6 +3,7 @@ package tictactoe.components;
 import external.AudioReader;
 import external.ImageReader;
 
+import external.LogMessage;
 import tictactoe.Colors;
 import tictactoe.internal.AppConstants;
 import tictactoe.internal.Game;
@@ -86,6 +87,7 @@ public class MenuBar extends JPanel implements Serializable {
             //new ConfirmWindow();
             Game.round.t.interrupt();
             applicant.dispose();
+            new LogMessage("Attempting to close window", LogMessage.INFO);
         });
         JButton minimizeButton = createSidebarButton(minimizeSprite, minimizeSpriteClicked, "Hide", "Click to minimize this app", n -> applicant.setState(JFrame.ICONIFIED));
         JPanel menuDivider = new JPanel();
