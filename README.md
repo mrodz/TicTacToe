@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-[![Latest release](https://img.shields.io/badge/Release-1.0.1-blue)](https://github.com/mrodz/TicTacToe-Reimagined/releases)
+[![Latest release](https://img.shields.io/badge/Release-1.0.2-blue)](https://github.com/mrodz/TicTacToe/releases)
 [![Build Status](https://img.shields.io/badge/Build-Passing-Sucess)]()
 [![Requires](https://img.shields.io/badge/Requires-Java%2015+-critical)](https://java.com/en/download/)
 
@@ -40,7 +40,7 @@ all game state data will be wiped, and you are given the choice to select new pl
 This is the area painted in purple, and contains a 9x9 grid of cells. Once a round of Tic Tac Toe
 has started, the game will loop through each move. If said turn belongs to a bot, it will make a
 move automatically; otherwise, the game will wait for a human user to click on a cell. The first 
-empty cell person clicks on will be saved as their placement.  
+empty cell a person clicks on will be saved as their placement.  
   
 A cell can only be used once per round. The game ends if there are no open slots left to fill,
 or if a playable entity manages to get three of their own tokens in a row.
@@ -48,18 +48,18 @@ or if a playable entity manages to get three of their own tokens in a row.
 #### The Status Bar
 You can find the status bar towards the bottom of the application. It will show you the current 
 status of the game. This can be one of the following: `Game hasn't started`, `Board Reset!`,
-`Started the Game!`, `%c wins!`, `Draw`, `Game in progress, %c's turn`.
+`Started the Game!`, `%c wins!`, `Draw`, and `Game in progress, %c's turn`.
 
 #### The Sidebar
 The sidebar is the red bar on the right side of the central app content, and has three useful buttons.
 These are an exit button, a minimize button, and a help button. The exit button closes the app, while the
-minimize button hides it, and the help button displays a simplified version of this ```README ```file.
+minimize button hides it, and the help button displays a simplified version of this ```README```file.
 
 ***
 
 ### Bots
 This implementation of Tic Tac Toe allows a user to play against bots that have varied levels of 
-complexity.
+"intelligence."
 
 #### Easy Bot
 The easy bot, as the name suggests, is a mild opponent that can only make random placements.
@@ -73,8 +73,8 @@ those conditions are met, then the bot will make a random placement.
 #### Hard Bot
 The hard bot is the most advanced of these bots, and it makes decisions by means of the 
 [Minimax Algorithm]. It will consider every single possible outcome from its moves, and 
-plot a move accordingly. This implementation was heavily inspire by [Sebastian Lague's Video],
-which gives excellent insight as to how decision trees work.
+plot a move accordingly. This implementation was heavily inspired by [Sebastian Lague's Video],
+which gives excellent insight into how decision trees work.
 
 ***
 
