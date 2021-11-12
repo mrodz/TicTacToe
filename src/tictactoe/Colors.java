@@ -31,6 +31,21 @@ import java.util.Map;
  *         <li>BUBBLE_BORDER</li>
  *         <li>BUBBLE_BACKGROUND</li>
  *         <li>SIDEBAR_ITEM_DIVIDER_BORDER</li>
+ *         <li>PLAYZONE_BUTTON_BACKGROUND</li>
+ *         <li>PLAYZONE_BUTTON_BORDER</li>
+ *         <li>PLAYZONE_BUTTON_BACKGROUND_HOVER</li>
+ *         <li>PLAYZONE_BUTTON_BACKGROUND_CLICKED</li>
+ *         <li>PLAYZONE_BUTTON_BACKGROUND_MIXED</li>
+ *         <li>PLAYZONE_BACKGROUND</li>
+ *         <li>PLAYZONE_BUTTON_BACKGROUND_LOCKED</li>
+ *         <li>PLAYZONE_BUTTON_BORDER_HOVER</li>
+ *         <li>WON_TILE</li>
+ *         <li>WON_TILE_HOVER</li>
+ *         <li>CONTROL_PANEL_BORDER</li>
+ *         <li>CONTROL_PANEL_BACKGROUND</li>
+ *         <li>START_BUTTON_FONT</li>
+ *         <li>START_BUTTON_CLICKED</li>
+ *         <li>TRANSPARENT</li>
  *     </ul>
  * </p>
  */
